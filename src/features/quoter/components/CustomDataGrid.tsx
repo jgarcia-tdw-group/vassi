@@ -1,6 +1,6 @@
 "use client";
 
-import { Typography } from "@mui/material";
+import { Typography,Button } from "@mui/material";
 import {
     DataGrid,
     type GridColDef,
@@ -83,6 +83,16 @@ export function CustomDataGrid<T extends { id: string }>({
             <Typography variant="h6" component="h2" gutterBottom>
                 {tableName}
             </Typography>
+
+            <div className="divbotoncart">
+
+                <div style={{ flexGrow: 5 }} />
+
+                <Button variant="contained" onClick={() => console.log("Send Order")}>
+                    {`Send Order`}
+                </Button>
+            </div>
+
             <DataGrid
                 loading={rows.length === 0}
                 checkboxSelection
